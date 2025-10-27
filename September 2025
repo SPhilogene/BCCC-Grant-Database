@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BCCC Grant Database</title>
+    <style>
+      table {
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 16px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #myTable tr.header,
+      #myTable tr:hover {
+        background-color: #f1f1f1;
+      }
+    </style>
+
+    <!-- Alphabetize/Number Sort lists -->
+    <link
+      rel="stylesheet"
+      href="https://www.cssscript.com/demo/sort-html-table-alphabetical-numerical/dist/sortable-tables.min.css"
+    />
+    <script src="https://www.cssscript.com/demo/sort-html-table-alphabetical-numerical/dist/sortable-tables.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Search -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css">
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+ -->
+  </head>
+  <body>
+    <p style="float: right; font-family: tahoma">
+      <i class="fa fa-search"></i> Search:
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search"
+        title="Searche"
+      />
+    </p>
+
+    <table class="sortable-table" id="myTable">
+      <thead>
+        <tr class="header">
+          <th>Name</th>
+          <th class="numeric-sort">Deadline</th>
+          <th class="numeric-sort">Amount</th>
+          <th>Funder</th>
+          <th>Applicant</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PSC-CUNY Research Award Program</td>
+          <td>2025-12-15</td>
+          <td>$7,000+</td>
+          <td>
+            Professional Staff Congress-City University of New York (PSC-CUNY)
+          </td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Cycle 57 of the PSC-CUNY Research Award Program is now active. The
+            PSC-CUNY Research Award Program (&ldquo;the Program&rdquo;) seeks to
+            grow faculty research, scholarship, and creative activities in all
+            academically relevant disciplines. The Program is designed to
+            strengthen both the CUNY research enterprise and the professional
+            development of its faculty. Supported activities are expansive and
+            may include diverse research forms and methods; efforts to start,
+            continue, or finish a project; and/or pursuit of external grant
+            awards.
+          </td>
+        </tr>
+        <tr>
+          <td>The SWOG/Hope Impact Award Program</td>
+          <td>2026-01-15</td>
+          <td>$250,000 over 2 years</td>
+          <td>The Hope Foundation</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            SWOG Cancer Research Network&rsquo;s mission is to improve the
+            practice of cancer medicine in preventing, detecting, and treating
+            cancer, and to enhance the quality of life for cancer survivors,
+            primarily through design and conduct of clinical trials. The
+            SWOG/Hope Foundation Impact Award is a funding program from The Hope
+            Foundation that encourages novel and innovative SWOG research by
+            supporting early and conceptual stages of these projects. The work
+            proposed should use resources from completed SWOG trials or be
+            directly translatable to clinical trials in SWOG and the NCTN in the
+            foreseeable future.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Improving Undergraduate STEM Education: Directorate for STEM
+            Education (IUSE: EDU)
+          </td>
+          <td>2026-01-21</td>
+          <td>$200,000+/yr up to 5 years</td>
+          <td>National Science Foundation (NSF)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            IUSE: EDU supports projects that seek to bring recent advances in
+            STEM knowledge into undergraduate education, that adapt, improve,
+            and incorporate evidence-based practices into STEM teaching and
+            learning, and that lay the groundwork for institutional improvement
+            in STEM education. In addition to innovative work at the frontier of
+            STEM education, this program also encourages replication of research
+            studies at different types of institutions and with different
+            student bodies to produce deeper knowledge about the effectiveness
+            and transferability of findings. IUSE: EDU also seeks to support
+            projects that have high potential for broader societal impacts,
+            including improved diversity of students and instructors
+            participating in STEM education, professional development for
+            instructors to ensure adoption of new and effective pedagogical
+            techniques that meet the changing needs of students, and projects
+            that promote institutional partnerships for collaborative research
+            and development. The IUSE: EDU program features two tracks: (1)
+            Engaged Student Learning and (2) Institutional and Community
+            Transformation.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Cancer Research Education Grants Program-Courses for Skills
+            Development (R25 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-01-25</td>
+          <td>$300,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The NIH Research Education Program (R25) supports research education
+            activities in the mission areas of the NIH. The overarching goal of
+            this R25 program is to support educational activities that encourage
+            individuals from diverse backgrounds, including those from groups
+            underrepresented in the biomedical and behavioral sciences, to
+            pursue further studies or careers in research. To accomplish the
+            stated over-arching goal, this FOA will support creative educational
+            activities with a primary focus on: courses for skills development.
+            Applications are encouraged that propose innovative,
+            state-of-the-art programs that address the cause, diagnosis,
+            prevention, or treatment of cancer, rehabilitation from cancer, or
+            the continuing care of cancer patients and the families of cancer
+            patients, in order to advance the NCI mission.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Ruth L. Kirschstein National Research Service Award (NRSA)
+            Institutional Research Training Grant (Parent T32)
+          </td>
+          <td>2026-01-25</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The National Institutes of Health (NIH) will award Ruth L.
+            Kirschstein National Research Service Award (NRSA) Institutional
+            Research Training Grants (T32) to eligible, domestic institutions to
+            develop and/or enhance predoctoral and postdoctoral research
+            training, including short-term research training, to help ensure
+            that a highly trained workforce is available to meet the needs of
+            the Nation&rsquo;s biomedical, behavioral, and clinical research
+            agenda. Research training programs are expected to incorporate
+            engaging, didactic, research, and career development elements to
+            prepare trainees for careers that will have a significant impact on
+            the health-related research needs of the Nation. Programs proposing
+            only short-term predoctoral research training should not apply to
+            this announcement, but rather to the Kirschstein-NRSA Short-Term
+            Institutional Research Training Grant Program (T35) exclusively
+            reserved for predoctoral, short-term research training.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Specialized Programs of Research Excellence (SPOREs) in Human
+            Cancers for Years 2024, 2025, and 2026 (P50 Clinical Trial Required)
+          </td>
+          <td>2026-01-25</td>
+          <td>$1,400,000/year for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) invites applications for P50 Research Center
+            Grants for Specialized Programs of Research Excellence (SPORE).
+            Based on the research proposed, applications may be jointly funded
+            with the National Institute of Dental and Craniofacial Research
+            (NIDCR). The program will fund P50 SPORE grants to support
+            state-of-the-art investigator-initiated translational research that
+            will contribute to improved prevention, early detection, diagnosis,
+            and treatment of an organ-specific cancer or a highly related group
+            of cancers. For the purpose of this NOFO, a group of highly related
+            cancers are those that are derived from the same organ system, such
+            as gastrointestinal, neuroendocrine, head and neck, and other
+            cancers. Other programmatically appropriate groups of cancers may
+            include those centered around a common biological mechanism critical
+            for promoting tumorigenesis and/or cancer progression in organ sites
+            that belong to different organ systems. For example, a SPORE may
+            focus on cancers caused by the same infectious agent or cancers
+            promoted and sustained by dysregulation of a common signaling
+            pathway. In addition, a SPORE may focus on cross-cutting themes such
+            as pediatric cancers or cancer health disparities. The research
+            supported through this program must be translational and must stem
+            from research on human biology using cellular, molecular,
+            structural, biochemical, and/or genetic experimental approaches.
+            SPORE projects must have the goal of reaching a translational human
+            endpoint within the project period of the grant.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            National Institute of General Medical Sciences Predoctoral Basic
+            Biomedical Sciences Research Training Program (T32)
+          </td>
+          <td>2026-01-25</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Mid-Career</td>
+          <td>
+            The goal of the National Institute of General Medical Sciences
+            (NIGMS) Ruth L. Kirschstein National Research Service Award (NRSA)
+            Predoctoral Basic Biomedical Sciences Research Training Program is
+            to develop a pool of well-trained scientists available to address
+            the nation&rsquo;s biomedical research agenda. Specifically, this
+            funding announcement provides support to eligible, domestic
+            organizations to develop and implement effective, evidence-informed
+            approaches to biomedical graduate training and mentoring that will
+            keep pace with the rapid evolution of the biomedical research
+            enterprise. NIGMS expects that the proposed research training
+            programs will incorporate didactic, research, and career development
+            elements to prepare trainees for careers that will have a
+            significant impact on the health-related research needs of the
+            nation.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Biomedical Research Environment &amp; Sponsored Programs
+            Administration Development (BRE-SPAD) Program (UC2- Clinical Trial
+            Not Allowed)
+          </td>
+          <td>2026-01-27</td>
+          <td>$500,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Mid-Career</td>
+          <td>
+            The Biomedical Research Environment &amp; Sponsored Programs
+            Administration Development (BRE-SPAD) Program aims to support
+            resource-limited institutions to conduct research, enhance their
+            research environments, and increase sponsored programs
+            administration capacity.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Stephen I. Katz Early Stage Investigator Research Project Grant (R01
+            Clinical Trial Not Allowed)
+          </td>
+          <td>2026-01-27</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The Stephen I. Katz Early Stage Investigator Research Project Grant
+            supports an innovative project that represents a change in research
+            direction for an early stage investigator (ESI) and for which no
+            preliminary data exist. Applications submitted to this notice of
+            funding opportunity (NOFO) must not include preliminary data.
+            Applications must include a separate attachment describing the
+            change in research direction. The proposed project must be related
+            to the programmatic interests of one or more of the participating
+            NIH Institutes and Centers (ICs) based on their scientific missions.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            EPSCoR Research Infrastructure Improvement Program: Focused EPSCoR
+            Collaborations (FEC)
+          </td>
+          <td>2026-01-27</td>
+          <td>$4,000,000+ over 4 years</td>
+          <td>National Science Foundation (NSF)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this program, NSF establishes partnerships with government,
+            higher education, and industry that are designed to affect
+            sustainable improvements in a jurisdiction's research
+            infrastructure, Research and Development (R&amp;D) capacity, and
+            hence, its R&amp;D competitiveness. The FEC program (formerly known
+            as "EPSCoR Track-2 program") builds inter-jurisdictional
+            collaborative teams of EPSCoR investigators in Science, Technology,
+            Engineering, and Mathematics (STEM) focus areas consistent with the
+            current National Science Foundation Strategic Plan. Projects are
+            investigator-driven and must include researchers from at least two
+            EPSCoR eligible jurisdictions with complementary expertise and
+            resources necessary to address challenges, which neither party could
+            address as well or as rapidly independently. FEC projects have a
+            comprehensive and integrated vision to drive discovery and build
+            sustainable STEM capacity that exemplifies institutional,
+            geographic, and disciplinary diversity. The projects' STEM research
+            and education activities seek to broaden participation through the
+            strategic inclusion and integration of all individuals,
+            institutions, and sectors. Additionally, EPSCoR recognizes that the
+            development of early-career faculty is critical to sustaining and
+            advancing research capacity.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Bioengineering Partnerships with Industry (U01 Clinical Trial
+            Optional)
+          </td>
+          <td>2026-01-27</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This Funding Opportunity Announcement (FOA) solicits applications
+            from research partnerships formed by academic and industrial
+            investigators to accelerate the development and adoption of
+            promising bioengineering tools and technologies that can address
+            important biomedical problems. The objectives are to establish these
+            tools and technologies as robust, well-characterized solutions that
+            fulfill an unmet need and are capable of enhancing our understanding
+            of life science processes or the practice of medicine. Awards will
+            focus on supporting multidisciplinary teams that apply an
+            integrative, quantitative bioengineering approach to developing
+            technologies. The goal of the program is to support technological
+            innovations that deliver new capabilities which can realize
+            meaningful solutions within 5 &ndash; 10 years.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Designing Synthetic Cells Beyond the Bounds of Evolution (Designer
+            Cells)
+          </td>
+          <td>2026-02-01</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Science Foundation (NSF)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Because of recent technological advances in synthetic biology and
+            bioengineering, researchers are now able to tailor cells and
+            cell-like systems for a variety of basic and applied research
+            purposes. The goal of this solicitation is to support research that
+            (1) develops cell-like systems to identify the minimal requirements
+            for the processes of life, (2) designs synthetically-modified cells
+            to address fundamental questions in the evolution of life or to
+            explore biological diversity beyond that which currently exists in
+            nature, and (3) leverages basic research in cell design to build
+            novel synthetic cell-like systems and cells for innovative
+            biotechnology applications. Proposals submitted to this solicitation
+            should address social, ethical, and safety issues associated with
+            designing and building synthetically modified cells as an integrated
+            component of the project.
+          </td>
+        </tr>
+        <tr>
+          <td>Science and Technology Studies (STS)</td>
+          <td>2026-02-02</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Science Foundation (NSF)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Science and Technology Studies (STS) is an interdisciplinary field
+            that investigates the conceptual foundations, historical
+            developments and social contexts of science, technology, engineering
+            and mathematics (STEM), including medical science. The STS program
+            supports proposals across a broad spectrum of research that uses
+            historical, philosophical and social scientific methods to
+            investigate STEM theory and practice. STS research may be empirical
+            or conceptual; specifically, it may focus on the intellectual,
+            material or social facets of STEM.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Academic-Industrial Partnerships for Translation of Technologies for
+            Diagnosis and Treatment (R01-Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>$499,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of this Notice of Funding Opportunity (NOFO) is to
+            stimulate efforts to translate scientific discoveries and
+            engineering developments into methods or tools that address problems
+            in basic research to understand disease, or in applied research to
+            assess risk, detect, prevent, diagnose, treat, and/or manage
+            disease. The rationale is to deliver new capabilities to meet
+            evolving requirements for technologies and methods relevant to the
+            advance of research and delivery of care in pre-clinical, clinical
+            and non-clinical settings, domestic or foreign, for conditions and
+            diseases within the missions of participating institutes.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            NIH Research Project Grant (Parent R01 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This notice of funding opportunity (NOFO) encourages applications
+            for research in cancer control and population sciences. The
+            overarching goal is to provide support to promote research efforts
+            on novel scientific ideas that have the potential to substantially
+            advance cancer research in statistical and analytic methods,
+            epidemiology, cancer survivorship, cancer-related behaviors and
+            behavioral interventions, health care delivery, digital health and
+            data science, and implementation science.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Modular R01s in Cancer Control and Population Sciences (R01 Clinical
+            Trial Optional)
+          </td>
+          <td>2026-02-05</td>
+          <td>$250,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The NIH Research Project Grant supports a discrete, specified,
+            circumscribed project in areas representing the specific interests
+            and competencies of the investigator(s). The proposed project must
+            be related to the programmatic interests of one or more of the
+            participating NIH Institutes and Centers (ICs) based on their
+            scientific missions.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Secondary Analysis and Integration of Existing Data to Elucidate
+            Cancer Risk and Related Outcomes (R01 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>$350,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) along with other participating Institutes
+            encourages submission of applications proposing to conduct secondary
+            data analysis and integration of existing datasets and database
+            resources, with the ultimate aim to elucidate cancer risk and
+            related outcomes (e.g., risk prediction or reduction, survival, or
+            response to treatment, etc.). The goal of this initiative is to
+            address key scientific questions relevant to cancer by supporting
+            the analysis of existing clinical, environmental, surveillance,
+            health services, vital statistics, behavioral, lifestyle, genomic,
+            and molecular profiles data. Applicants are encouraged to leverage
+            and perform innovative analyses of the existing data. Applications
+            may include new research aims that are being addressed with existing
+            data, new or advanced methods of analyses, or novel combinations and
+            integration of datasets that allow the exploration of important
+            scientific questions in cancer research. This initiative is also
+            available through the Exploratory/Developmental Research Grant (R21)
+            mechanism.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Developing novel theory and methods for understanding the genetic
+            architecture of complex human traits (R01 Clinical Trial Not
+            Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>$500,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The goal of this NOFO is to support applications for novel theory
+            and methods development that enable better understanding of how
+            genetic and non-genetic factors contribute to complex trait
+            variation across individuals, families, and populations. Approaches
+            should be interdisciplinary drawing from the natural and social
+            sciences, account for interdependencies across scales of biological,
+            social, and ecological organization, and make extensive use of
+            theory, modeling, and validation with available large-scale
+            datasets.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            NLM Research Grants in Biomedical Informatics and Data Science (R01
+            Clinical Trial Optional)
+          </td>
+          <td>2026-02-05</td>
+          <td>$250,000/yr for 4 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The National Library of Medicine (NLM) supports innovative research
+            and development in biomedical informatics and data science. This
+            funding opportunity focuses on biomedical discovery and data-powered
+            health, integrating streams of complex and interconnected research
+            outputs that can be translated into scientific insights, clinical
+            care, public health practices, and personal wellness. The scope of
+            NLM's interest in these research domains is broad, with emphasis on
+            new and innovative methods and approaches to foster data driven
+            discovery in the biomedical and clinical health sciences as well as
+            domain-independent, scalable, and reusable/reproducible approaches
+            to discovery, curation, analysis, organization, and management of
+            health-related digital objects.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Molecular Imaging of Inflammation in Cancer (R01 Clinical Trial Not
+            Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>$500,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) invites research grant applications (R01) for
+            the development and application of current and emerging molecular
+            imaging methods to gain fundamental insights into cancer
+            inflammation in vivo. The motivation for this initiative is the
+            recognition that much of the current imaging research on
+            inflammation in cancer relies heavily on in vitro and ex vivo
+            methods. These approaches have limited potential to provide
+            significant insights into the dynamic interactions between cancer
+            and inflammation. Utilizing molecular imaging probes in pre-clinical
+            and clinical investigations allows for precise temporal resolution
+            at molecular and cellular levels. This information is valuable for
+            identifying and characterizing in vivo inflammatory cellular
+            physiology in cancer and for detecting molecular changes in response
+            to treatment. This NOFO encourages applications focused on
+            developing integrated imaging approaches to investigate the role of
+            inflammation in cancer through strong cross-discipline collaboration
+            between cancer basic science researchers and imaging scientists.
+            These collaborations are expected to advance the science and
+            understanding of cancer inflammation interactions.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Investigator Initiated Innovation in Computational Genomics and Data
+            Science (R01 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>$350,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of this renewing Notice of Funding Opportunity (NOFO) is
+            to support investigator-initiated research efforts fostering
+            innovation in computational genomics, data science, statistics,
+            bioinformatics, and data visualization and exploration. This NOFO
+            supports development of innovative analytical methodologies and
+            approaches and early-stage tools and software for genomics, rather
+            than incremental advances or modification and application of
+            existing approaches. Projects should be enabling for genomics
+            research, broadly applicable to human health and disease, and
+            generalizable across diseases and biological systems. This
+            initiative is also available through the Exploratory/Developmental
+            Research Grant (R21) mechanism.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            The Role of Work in Health Disparities in the U.S. (R01 Clinical
+            Trials Optional)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of this Notice of Funding Opportunity (NOFO) is to
+            support innovative population-based research that can contribute to
+            identifying and characterizing pathways and mechanisms through which
+            work or occupation influences health outcomes and health status
+            among populations with health and/or health care disparities.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Basic Research in Cancer Health Disparities (R01 Clinical Trial Not
+            Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This Notice of Funding Opportunity (NOFO) encourages grant
+            applications from investigators interested in conducting basic,
+            mechanistic research into the biological/genetic causes of cancer
+            health disparities. These research project grants (R01) will support
+            innovative studies designed to investigate biological/genetic
+            contributors of cancer health disparities, such as (1) mechanistic
+            studies of biological factors associated with cancer health
+            disparities, including those related to basic research in cancer
+            biology or cancer prevention strategies, (2) the development and
+            testing of new methodologies and models, and (3) secondary data
+            analyses. This NOFO is also designed to aid and facilitate the
+            growth of a nationwide cohort of scientists with a high level of
+            basic research expertise in cancer health disparities research who
+            can expand available resources and tools, such as biospecimens,
+            patient derived models, and methods that are necessary to conduct
+            basic research in cancer health disparities.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Assay development and screening for discovery of chemical probes,
+            drugs or immunomodulators (R01 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) intends to stimulate research in discovery
+            and development of novel, small molecules for cancer. Molecules
+            discovered through this NOFO may be used to probe cancer biology, to
+            validate cancer targets, or as the basis for optimized drugs. Stages
+            of discovery research covered by this NOFO include: 1) development
+            of the primary screen assay(s) and testing in an initial pilot
+            screen; 2) primary screen implementation to identify initial
+            screening hits (high throughput target-focused screens, or moderate
+            throughput screens); 3) hit validation using a series of assays and
+            initial medicinal chemistry inspection to prioritize the hit set.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Interventions to expand cancer screening and preventive services to
+            ADVANCE health in populations that experience health disparities
+            (R01, Clinical Trial Required)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The Office of Disease Prevention (ODP) and participating National
+            Institutes of Health (NIH) Institutes, Centers, and Offices (ICs)
+            are issuing this R01 to solicit applications to address barriers and
+            facilitators that impede use or uptake of cancer screening and
+            preventive services in populations that experience health
+            disparities. Interventions should include screening, preventive
+            services, or other healthcare processes, including timely follow-up
+            of abnormal findings, and referral to accessible care. Projects are
+            encouraged to leverage collaborations with community partners and
+            service providers. Interventions should address barriers and
+            facilitators at two or more of the following levels: patient,
+            clinician, healthcare setting, and neighborhood/community. Specific
+            research interests of participating NIH ICs are detailed within.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Interventions to Address Disparities in Liver Diseases and Liver
+            Cancer (R01-Clinical Trials Optional)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This initiative will support multi-level and/or multi-domain
+            intervention research to reduce disparities in liver diseases and
+            liver cancer among populations who experience health disparities in
+            the United States (U.S.).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Population Approaches to Reducing Alcohol-related Cancer Risk (R01
+            Clinical Trial Optional)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This Notice of Funding Opportunity (NOFO) aims to support research
+            on interdisciplinary population approaches to increasing awareness
+            of the relationship between alcohol and cancer risk, understanding
+            and changing social norms related to alcohol consumption, developing
+            and/or evaluating alcohol policy approaches, and the development,
+            testing, and implementation of population-level interventions to
+            reduce alcohol-related cancer risk. Applications that address
+            multiple levels of consumption, such as moderate and heavy drinking,
+            are of particular interest, as well as those focusing on alcohol use
+            disorder (AUD) from the perspective of cancer prevention and
+            control. Proposals addressing understudied areas are encouraged, as
+            is attention to underrepresented minority (URM) populations
+            experiencing cancer and alcohol-related disparities such as American
+            Indian, and Alaskan Native populations.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Understanding Expectancies in Cancer Symptom Management (R01
+            Clinical Trial Required)
+          </td>
+          <td>2026-02-05</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This Notice of Funding Opportunity (NOFO) will solicit mechanistic
+            research that aims to understand how and why expectancy effects
+            occur in a cancer context, elucidate their role in cancer symptom
+            management, and identify patients, symptoms, cancer sites, and
+            contexts in which expectancy effects can be leveraged to improve
+            cancer outcomes. Expectancies are defined in this context as beliefs
+            about future outcomes, including one&rsquo;s response to cancer or
+            cancer treatment. Expectancies can be evoked by social,
+            psychological, environmental, and systemic factors. Expectancy
+            effects are the cognitive, behavioral, and biological outcomes
+            caused by expectancies. Expectancy effects can be generated by
+            expectancies held by patients, clinicians, family members,
+            caregivers, and/or dyadic/social networks. Program is particularly
+            interested in applications that enroll individuals and groups from
+            populations historically underrepresented or excluded from
+            biomedical and behavioral research.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Utilizing the PLCO Biospecimens Resource to Bridge Gaps in Cancer
+            Etiology and Early Detection Research (U01 Clinical Trial Not
+            Allowed)
+          </td>
+          <td>2026-02-10</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) encourages the submission of applications
+            that propose to advance research in cancer etiology and early
+            detection biomarkers, utilizing the advantages of the unique
+            biorepository resources of the NCI-sponsored Prostate, Lung,
+            Colorectal, and Ovarian Cancer (PLCO) Screening Trial. The PLCO
+            Biorepository offers high-quality, prospectively collected, serial
+            pre-diagnostic blood samples from the PLCO screened arm
+            participants, and buccal cells from both the screened and the
+            control arm participants. Available data associated with the
+            biospecimens includes demographic, diet, lifestyle, smoking,
+            screening results, and other clinical data. This NOFO supports a
+            wide range of cancer research including, but not limited to,
+            biochemical and genetic analyses of cancer risk, as well as
+            discovery and validation of early detection biomarkers. The proposed
+            research project must involve use of PLCO biospecimens and may
+            include other resources; additionally, it should also take advantage
+            of the unique characteristics of the PLCO biospecimens. Research on
+            non-cancer outcomes, especially those related to aging (e.g.,
+            Alzheimer&rsquo;s, depression, hip fracture, osteoporosis and
+            rheumatoid arthritis) may also be supported. Research projects that
+            do not involve the use of PLCO biospecimens will not be supported
+            under this NOFO.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Independent Scientist Award (Parent K02-Independent Clinical Trial
+            Not Allowed)
+          </td>
+          <td>2026-02-12</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of the NIH Independent Scientist Award (K02) is to
+            foster the development of outstanding scientists and enable them to
+            expand their potential to make significant contributions to their
+            field of research. The K02 award provides three to five years of
+            salary support and "protected time" for newly independent scientists
+            who can demonstrate the need for a period of intensive research
+            focus as a means of enhancing their research careers. Each
+            independent scientist career award program must be tailored to meet
+            the individual needs of the candidate.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            NIH Pathway to Independence Award (Parent K99/R00 Independent
+            Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-12</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career</td>
+          <td>
+            The purpose of the NIH Pathway to Independence Award (K99/R00)
+            program is to facilitate a timely transition of outstanding
+            postdoctoral researchers with a research and/or clinical doctorate
+            degree from mentored, postdoctoral research positions to
+            independent, tenure-track or equivalent faculty positions. The
+            program will provide independent NIH research support during this
+            transition in order to help awardees to launch competitive,
+            independent research careers
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mentored Quantitative Research Development Award (Parent K25
+            Independent Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-12</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of the NIH Independent Scientist Award (K02) is to
+            foster the development of outstanding scientists and enable them to
+            expand their potential to make significant contributions to their
+            field of research. The K02 award provides three to five years of
+            salary support and "protected time" for newly independent scientists
+            who can demonstrate the need for a period of intensive research
+            focus as a means of enhancing their research careers. Each
+            independent scientist career award program must be tailored to meet
+            the individual needs of the candidate.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mentored Research Scientist Development Award (Parent
+            K01-Independent Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-12</td>
+          <td>
+            <span style="display: none">$6000000 </span>varies to reflect the
+            needs of the project
+          </td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of the NIH Mentored Research Scientist Development Award
+            (K01) is to provide support and &ldquo;protected time&rdquo; (three
+            to five years) for an intensive, supervised career development
+            experience in the biomedical, behavioral, or clinical sciences
+            leading to research independence. Although all of the participating
+            NIH Institutes and Centers (ICs) use this support mechanism to
+            support career development experiences that lead to research
+            independence, some ICs use the K01 award for individuals who propose
+            to train in a new field or for individuals who have had a hiatus in
+            their research career because of illness or pressing family
+            circumstances. Other ICs use the K01 to support career development
+            in specific fields.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Assay Validation of High Quality Markers for Clinical Studies in
+            Cancer (UH3 Clinical Trials Not Allowed)
+          </td>
+          <td>2026-02-13</td>
+          <td>$250,000/yr for 3 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) intends to accelerate the adoption and
+            validation of molecular/cellular/imaging markers (referred to as
+            "markers" or "biomarkers") and assays for cancer detection,
+            diagnosis, prognosis, monitoring, and prediction of response or
+            resistance to treatment, as well as markers for cancer prevention
+            and control. This NOFO will also support the validation of
+            pharmacodynamic markers and markers of toxicity. Applicants to this
+            NOFO must have an assay(s) whose performance has been analytically
+            validated in specimens similar to those for the intended clinical
+            use of the marker(s) and assay(s). As chemotherapies and/or
+            radiation therapies are increasingly combined with immunotherapies
+            to enhance the durability of anti-cancer responses, assays for
+            measuring multiple markers, including immune markers, can be
+            developed and validated simultaneously.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Exploratory/Developmental Bioengineering Research Grants (EBRG) (R21
+            Clinical Trial Optional)
+          </td>
+          <td>2026-02-16</td>
+          <td>$275,000 over 2 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of this engineering-oriented funding opportunity
+            announcement (FOA) is to encourage submissions of
+            exploratory/developmental Bioengineering Research Grant (EBRG)
+            applications to demonstrate feasibility and potential utility of new
+            capabilities or improvements in quality, speed, efficacy,
+            operability, costs, and/or accessibility of solutions to problems in
+            basic biomedical, pre-clinical, or clinical research, clinical care
+            delivery, or accessibility. This FOA will support clinical trials
+            that test functionality or validate performance in the chosen
+            setting. Applications that propose phase III clinical trials in any
+            area of cancer research are not sought by and will not be supported
+            through this FOA
+          </td>
+        </tr>
+        <tr>
+          <td>
+            NIH Exploratory/Developmental Research Project Grant (Parent R21
+            Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-16</td>
+          <td>$275,000 over 2 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The NIH Exploratory/Developmental Grant supports exploratory and
+            developmental research projects by providing support for the early
+            and conceptual stages of these projects. These studies may involve
+            considerable risk but may lead to a breakthrough in a particular
+            area, or to the development of novel techniques, agents,
+            methodologies, models, or applications that could have a major
+            impact on a field of biomedical, behavioral, or clinical research.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Exploratory Grants in Cancer Control (R21 Clinical Trial Optional)
+          </td>
+          <td>2026-02-16</td>
+          <td>$275,000 over 2 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this Notice of Funding Opportunity (NOFO), the National
+            Cancer Institute (NCI) encourages the submission of
+            exploratory/developmental research grant (R21) applications that
+            focus on different aspects of cancer control by modifying behavior,
+            screening, and understanding etiologic factors contributing to the
+            development of cancer, and developing ways to control cancer. The
+            overarching goal is to provide support to promote the early and
+            conceptual stages of research efforts on novel scientific ideas that
+            have the potential to substantially advance population-based cancer
+            research, such as the development of novel techniques, agents,
+            methodologies, models, or applications that could have a major
+            impact on a field of cancer research (e.g. epidemiologic,
+            biomedical, behavioral, health care delivery or clinical).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mechanisms that Impact Cancer Risk with Use of Incretin Mimetics
+            (R21 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-16</td>
+          <td>$275,000 over 2 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            Through this notice of funding opportunity (NOFO), the National
+            Cancer Institute (NCI) invites applications for
+            investigator-initiated studies addressing mechanisms by which
+            incretin mimetics, specifically glucagon-like peptide (GLP)-1 or
+            dual GLP-1/glucose-dependent insulinotropic polypeptide (GIP)-1
+            receptor agonists (RAs), impact cancer risk. The focus on these
+            agents is due to their reported effects on thyroid, prostate and
+            other cancer risks, and the generally more favorable efficacy and
+            side effect profile compared to other classes of incretin mimetics.
+            In addition, this NOFO seeks to draw in talented scientists to the
+            cancer biology field who may study incretin mimetic effects on
+            diseases other than cancer.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Dissemination and Implementation Research in Health (R21 Clinical
+            Trial Optional)
+          </td>
+          <td>2026-02-16</td>
+          <td>$275,000 over 2 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of this Notice of Funding Opportunity (NOFO) is to
+            support studies that will identify, develop, and/or test strategies
+            for overcoming barriers to the adoption, adaptation, integration,
+            sustainability, scale-up, and spread of evidence-based
+            interventions, practices, programs, tools, treatments, guidelines,
+            and policies (herein referred to collectively as evidence-based
+            interventions). Studies that promote the dissemination and
+            implementation of evidence-based interventions among relevant
+            communities are encouraged. Conversely, there is a benefit in
+            understanding circumstances that create a need to stop or reduce
+            (de-implement) the use of practices that are ineffective, unproven,
+            low-value, or harmful. In addition, studies to advance dissemination
+            and implementation research methods and measures are encouraged.
+            Applications that focus on re-implementation of evidence-based
+            health services that may be disrupted amidst disasters remain
+            relevant.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Technology Development Research for Establishing Feasibility and
+            Proof of Concept (R21-Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-16</td>
+          <td>$275,000 over 2 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            This Notice of Funding Opportunity (NOFO)supports exploratory
+            research leading to proof of concept for the development of new
+            technologies relevant to the NIGMS mission. Projects should entail a
+            high degree of risk and/or novelty, and have a high future potential
+            impact in biomedical research. Outcomes or products of the proposed
+            project, which should significantly advance the current state of the
+            art, may include, but are not limited to: laboratory instruments and
+            other devices, algorithms and software, chemical reagents and
+            processes, biological molecules or systems that have been modified
+            by human intervention for use as research tools.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Research Enhancement Award Program (REAP) for Health Professional
+            Schools and Graduate Schools (R15 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-25</td>
+          <td>$375,000 over 3 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of the Research Enhancement Award Program (REAP) for
+            Health Professional Schools and Graduate Schools is to support small
+            scale research grants at institutions that do not receive
+            substantial funding from the NIH, with an emphasis on providing
+            biomedical research experiences primarily for health professional,
+            undergraduate and graduate students and enhancing the research
+            environment at applicant institutions.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Academic Research Enhancement Award (AREA) for Undergraduate-Focused
+            Institutions (R15 Clinical Trial Not Allowed)
+          </td>
+          <td>2026-02-25</td>
+          <td>$300,000 over 3 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The purpose of this Academic Research Enhancement Award (AREA) for
+            Undergraduate-Focused Institutions is to support small scale
+            research grants at institutions that do not receive substantial
+            funding from the NIH, with an emphasis on providing biomedical
+            research experiences primarily for undergraduate students, and
+            enhancing the research environment at applicant institutions.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            EHR Core Research (ECR): Building Capacity in STEM Education
+            Research (ECR: BCSER)
+          </td>
+          <td>2026-02-27</td>
+          <td>$25,000+</td>
+          <td>National Science Foundation (NSF)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            ECR&rsquo;s Building Capacity in STEM Education Research (ECR:
+            BCSER) supports projects that build investigators&rsquo; capacity to
+            carry out high-quality STEM education research that will enhance the
+            nation&rsquo;s STEM education enterprise. In addition, ECR: BCSER
+            seeks to broaden the pool of researchers who can advance knowledge
+            regarding STEM learning and learning environments, broadening
+            participation in STEM fields, and STEM workforce development.
+            Researchers of races and ethnicities, genders, sexual orientations,
+            and abilities who are currently underrepresented in their
+            participation in STEM education research and the STEM workforce, as
+            well as faculty at minority-serving and two-year institutions, are
+            particularly encouraged to submit proposals. Specifically, ECR:
+            BCSER supports activities that enable researchers to expand their
+            areas of expertise and acquire the requisite knowledge and skills to
+            conduct rigorous research in STEM education. Career development may
+            be accomplished through investigator-initiated professional
+            development and research projects or through institutes that enable
+            researchers to integrate methodological strategies with theoretical
+            and practical issues in STEM education.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            NSF Scholarships in Science, Technology, Engineering, and
+            Mathematics Program (S-STEM)
+          </td>
+          <td>2026-03-03</td>
+          <td>$2,000,000+ over 6 years</td>
+          <td>National Science Foundation (NSF)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The main goal of the S-STEM program is to enable low-income students
+            with academic ability, talent or potential to pursue successful
+            careers in promising STEM fields. Ultimately, the S-STEM program
+            seeks to increase the number of academically promising low-income
+            students who graduate with a S-STEM eligible degree and contribute
+            to the American innovation economy with their STEM knowledge.
+            Recognizing that financial aid alone cannot increase retention and
+            graduation in STEM, the program provides awards to institutions of
+            higher education (IHEs) not only to fund scholarships, but also to
+            adapt, implement, and study evidence-based curricular and
+            co-curricular activities that have been shown to be effective
+            supporting recruitment, retention, transfer (if appropriate),
+            student success, academic/career pathways, and graduation in STEM.
+          </td>
+        </tr>
+        <tr>
+          <td>Dr. Charles A. Coltman, Jr. Fellowship Program</td>
+          <td>2026-03-15</td>
+          <td>$50,000/yr for 2 years</td>
+          <td>The Hope Foundation</td>
+          <td>Early Career</td>
+          <td>
+            A Career Development Program for Early Career Investigators-The
+            primary purpose of the Dr. Charles A. Coltman, Jr. Fellowship is to
+            engage outstanding early career investigators from SWOG-affiliated
+            institutions in learning clinical trial methodology within an
+            academic and network group environment that will lead to independent
+            clinical research, while honoring the legacy of long-time SWOG Chair
+            and leader, Dr. Charles A. Coltman, Jr.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Summer Research Education Experience Program (R25 Clinical Trial Not
+            Allowed)
+          </td>
+          <td>2026-03-17</td>
+          <td>$125,000/yr for 5 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The NIH Research Education Program (R25) supports research
+            educational activities that complement other formal training
+            programs in the mission areas of the NIH Institutes and Centers. The
+            overarching goals of the NIH R25 program are to: (1) complement
+            and/or enhance the training of a workforce to meet the
+            nation&rsquo;s biomedical, behavioral and clinical research needs;
+            (2) encourage individuals from diverse backgrounds, including those
+            from groups underrepresented in the biomedical and behavioral
+            sciences, to pursue further studies or careers in research; (3) help
+            recruit individuals with specific specialty or disciplinary
+            backgrounds to research careers in biomedical, behavioral and
+            clinical sciences; and (4) foster a better understanding of
+            biomedical, behavioral and clinical research and its implications.
+            The overarching goal of this R25 program is to support educational
+            activities that complement and/or enhance the training of a
+            workforce to meet the nation&rsquo;s biomedical, behavioral and
+            clinical research needs. To accomplish the stated over-arching goal,
+            this FOA will support creative educational activities with a primary
+            focus on Research Experiences for high school students,
+            undergraduate students, and/or science teachers during the summer
+            academic break.
+          </td>
+        </tr>
+        <tr>
+          <td>AHRQ Conference Grant Programs (R13)</td>
+          <td>2026-04-12</td>
+          <td>$50,000/yr up to 3 years</td>
+          <td>National Institutes of Health (NIH)</td>
+          <td>Early Career / Mid-Career</td>
+          <td>
+            The Agency for Healthcare Research and Quality (AHRQ) announces its
+            interest in supporting conferences through the AHRQ Single-Year and
+            Multiple-Year Conference grant programs (R13). AHRQ seeks to support
+            conferences that help further its mission to produce evidence to
+            make health care safer, higher quality, more accessible, equitable
+            and affordable, and to work with HHS and other partners to make sure
+            the evidence is understood and used.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          var allTDs = tr[i].getElementsByTagName("td");
+
+          for (index = 0; index < allTDs.length; index++) {
+            txtValue = allTDs[index].textContent || allTDs[index].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              break;
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+      function sortTable() {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("myTable");
+        switching = true;
+        /*Make a loop that will continue until
+  no switching has been done:*/
+        while (switching) {
+          //start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+    first, which contains table headers):*/
+          for (i = 1; i < rows.length - 1; i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[0];
+            y = rows[i + 1].getElementsByTagName("TD")[0];
+            //check if the two rows should switch place:
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+          if (shouldSwitch) {
+            /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
