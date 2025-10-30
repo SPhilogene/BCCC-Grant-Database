@@ -15,13 +15,31 @@
         padding: 16px;
       }
 
+.header {
+  overflow: hidden;
+  padding: 10px 10px;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  
+  .header-right {
+    float: none;
+  }
+}
       tr:nth-child(even) {
-        background-color: #f2f2f2;
+        background-color: #FDF5F9;
       }
 
-      #myTable tr.header,
-      #myTable tr:hover {
-        background-color: #f1f1f1;
+      #myTable tr.header {
+        background-color: #E2CFE8;
+      }
+      
+       #myTable tr:hover {
+        background-color: #DAE7C6;
       }
     </style>
 
@@ -43,6 +61,14 @@
  -->
   </head>
   <body>
+  
+  <div class="header">
+  <a href="https://bccc.blog.brooklyn.edu/"><img src="https://bccc.blog.brooklyn.edu/files/2020/09/bccc_logo_final.png" alt="Brooklyn College Cancer Center Logo" style="width:20%"></a>
+  <div class="header-right">
+    <h1 style="font-family:Segoe UI; margin-top: 7px;">Funding Opportunity Directory</h1>
+  </div>
+</div>
+
     <p style="float: right; font-family: tahoma">
       <i class="fa fa-search"></i> Search:
       <input
@@ -75,6 +101,7 @@
           </td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Cycle 57 of the PSC-CUNY Research Award Program is now active. The
             PSC-CUNY Research Award Program (&ldquo;the Program&rdquo;) seeks to
             grow faculty research, scholarship, and creative activities in all
@@ -83,7 +110,7 @@
             development of its faculty. Supported activities are expansive and
             may include diverse research forms and methods; efforts to start,
             continue, or finish a project; and/or pursuit of external grant
-            awards.
+            awards.</details>
           </td>
         </tr>
         <tr>
@@ -93,6 +120,7 @@
           <td>The Hope Foundation</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             SWOG Cancer Research Network&rsquo;s mission is to improve the
             practice of cancer medicine in preventing, detecting, and treating
             cancer, and to enhance the quality of life for cancer survivors,
@@ -102,7 +130,7 @@
             supporting early and conceptual stages of these projects. The work
             proposed should use resources from completed SWOG trials or be
             directly translatable to clinical trials in SWOG and the NCTN in the
-            foreseeable future.
+            foreseeable future.</details>
           </td>
         </tr>
         <tr>
@@ -115,6 +143,7 @@
           <td>National Science Foundation (NSF)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             IUSE: EDU supports projects that seek to bring recent advances in
             STEM knowledge into undergraduate education, that adapt, improve,
             and incorporate evidence-based practices into STEM teaching and
@@ -132,7 +161,7 @@
             that promote institutional partnerships for collaborative research
             and development. The IUSE: EDU program features two tracks: (1)
             Engaged Student Learning and (2) Institutional and Community
-            Transformation.
+            Transformation.</details>
           </td>
         </tr>
         <tr>
@@ -145,6 +174,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The NIH Research Education Program (R25) supports research education
             activities in the mission areas of the NIH. The overarching goal of
             this R25 program is to support educational activities that encourage
@@ -157,7 +187,7 @@
             state-of-the-art programs that address the cause, diagnosis,
             prevention, or treatment of cancer, rehabilitation from cancer, or
             the continuing care of cancer patients and the families of cancer
-            patients, in order to advance the NCI mission.
+            patients, in order to advance the NCI mission.</details>
           </td>
         </tr>
         <tr>
@@ -173,6 +203,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The National Institutes of Health (NIH) will award Ruth L.
             Kirschstein National Research Service Award (NRSA) Institutional
             Research Training Grants (T32) to eligible, domestic institutions to
@@ -187,7 +218,7 @@
             only short-term predoctoral research training should not apply to
             this announcement, but rather to the Kirschstein-NRSA Short-Term
             Institutional Research Training Grant Program (T35) exclusively
-            reserved for predoctoral, short-term research training.
+            reserved for predoctoral, short-term research training.</details>
           </td>
         </tr>
         <tr>
@@ -200,6 +231,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) invites applications for P50 Research Center
             Grants for Specialized Programs of Research Excellence (SPORE).
@@ -224,7 +256,7 @@
             from research on human biology using cellular, molecular,
             structural, biochemical, and/or genetic experimental approaches.
             SPORE projects must have the goal of reaching a translational human
-            endpoint within the project period of the grant.
+            endpoint within the project period of the grant.</details>
           </td>
         </tr>
         <tr>
@@ -240,6 +272,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The goal of the National Institute of General Medical Sciences
             (NIGMS) Ruth L. Kirschstein National Research Service Award (NRSA)
             Predoctoral Basic Biomedical Sciences Research Training Program is
@@ -253,7 +286,7 @@
             programs will incorporate didactic, research, and career development
             elements to prepare trainees for careers that will have a
             significant impact on the health-related research needs of the
-            nation.
+            nation.</details>
           </td>
         </tr>
         <tr>
@@ -267,11 +300,12 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The Biomedical Research Environment &amp; Sponsored Programs
             Administration Development (BRE-SPAD) Program aims to support
             resource-limited institutions to conduct research, enhance their
             research environments, and increase sponsored programs
-            administration capacity.
+            administration capacity.</details>
           </td>
         </tr>
         <tr>
@@ -287,6 +321,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The Stephen I. Katz Early Stage Investigator Research Project Grant
             supports an innovative project that represents a change in research
             direction for an early stage investigator (ESI) and for which no
@@ -295,7 +330,7 @@
             Applications must include a separate attachment describing the
             change in research direction. The proposed project must be related
             to the programmatic interests of one or more of the participating
-            NIH Institutes and Centers (ICs) based on their scientific missions.
+            NIH Institutes and Centers (ICs) based on their scientific missions.</details>
           </td>
         </tr>
         <tr>
@@ -308,6 +343,7 @@
           <td>National Science Foundation (NSF)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this program, NSF establishes partnerships with government,
             higher education, and industry that are designed to affect
             sustainable improvements in a jurisdiction's research
@@ -328,7 +364,7 @@
             strategic inclusion and integration of all individuals,
             institutions, and sectors. Additionally, EPSCoR recognizes that the
             development of early-career faculty is critical to sustaining and
-            advancing research capacity.
+            advancing research capacity.</details>
           </td>
         </tr>
         <tr>
@@ -344,6 +380,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This Funding Opportunity Announcement (FOA) solicits applications
             from research partnerships formed by academic and industrial
             investigators to accelerate the development and adoption of
@@ -356,7 +393,7 @@
             integrative, quantitative bioengineering approach to developing
             technologies. The goal of the program is to support technological
             innovations that deliver new capabilities which can realize
-            meaningful solutions within 5 &ndash; 10 years.
+            meaningful solutions within 5 &ndash; 10 years.</details>
           </td>
         </tr>
         <tr>
@@ -372,6 +409,7 @@
           <td>National Science Foundation (NSF)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Because of recent technological advances in synthetic biology and
             bioengineering, researchers are now able to tailor cells and
             cell-like systems for a variety of basic and applied research
@@ -385,7 +423,7 @@
             biotechnology applications. Proposals submitted to this solicitation
             should address social, ethical, and safety issues associated with
             designing and building synthetically modified cells as an integrated
-            component of the project.
+            component of the project.</details>
           </td>
         </tr>
         <tr>
@@ -398,6 +436,7 @@
           <td>National Science Foundation (NSF)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Science and Technology Studies (STS) is an interdisciplinary field
             that investigates the conceptual foundations, historical
             developments and social contexts of science, technology, engineering
@@ -406,7 +445,7 @@
             historical, philosophical and social scientific methods to
             investigate STEM theory and practice. STS research may be empirical
             or conceptual; specifically, it may focus on the intellectual,
-            material or social facets of STEM.
+            material or social facets of STEM.</details>
           </td>
         </tr>
         <tr>
@@ -419,6 +458,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of this Notice of Funding Opportunity (NOFO) is to
             stimulate efforts to translate scientific discoveries and
             engineering developments into methods or tools that address problems
@@ -428,7 +468,7 @@
             evolving requirements for technologies and methods relevant to the
             advance of research and delivery of care in pre-clinical, clinical
             and non-clinical settings, domestic or foreign, for conditions and
-            diseases within the missions of participating institutes.
+            diseases within the missions of participating institutes.</details>
           </td>
         </tr>
         <tr>
@@ -443,6 +483,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This notice of funding opportunity (NOFO) encourages applications
             for research in cancer control and population sciences. The
             overarching goal is to provide support to promote research efforts
@@ -450,7 +491,7 @@
             advance cancer research in statistical and analytic methods,
             epidemiology, cancer survivorship, cancer-related behaviors and
             behavioral interventions, health care delivery, digital health and
-            data science, and implementation science.
+            data science, and implementation science.</details>
           </td>
         </tr>
         <tr>
@@ -463,12 +504,13 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The NIH Research Project Grant supports a discrete, specified,
             circumscribed project in areas representing the specific interests
             and competencies of the investigator(s). The proposed project must
             be related to the programmatic interests of one or more of the
             participating NIH Institutes and Centers (ICs) based on their
-            scientific missions.
+            scientific missions.</details>
           </td>
         </tr>
         <tr>
@@ -481,6 +523,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) along with other participating Institutes
             encourages submission of applications proposing to conduct secondary
@@ -498,7 +541,7 @@
             integration of datasets that allow the exploration of important
             scientific questions in cancer research. This initiative is also
             available through the Exploratory/Developmental Research Grant (R21)
-            mechanism.
+            mechanism.</details>
           </td>
         </tr>
         <tr>
@@ -512,6 +555,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The goal of this NOFO is to support applications for novel theory
             and methods development that enable better understanding of how
             genetic and non-genetic factors contribute to complex trait
@@ -520,7 +564,7 @@
             sciences, account for interdependencies across scales of biological,
             social, and ecological organization, and make extensive use of
             theory, modeling, and validation with available large-scale
-            datasets.
+            datasets.</details>
           </td>
         </tr>
         <tr>
@@ -533,6 +577,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The National Library of Medicine (NLM) supports innovative research
             and development in biomedical informatics and data science. This
             funding opportunity focuses on biomedical discovery and data-powered
@@ -544,7 +589,7 @@
             discovery in the biomedical and clinical health sciences as well as
             domain-independent, scalable, and reusable/reproducible approaches
             to discovery, curation, analysis, organization, and management of
-            health-related digital objects.
+            health-related digital objects.</details>
           </td>
         </tr>
         <tr>
@@ -557,6 +602,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) invites research grant applications (R01) for
             the development and application of current and emerging molecular
@@ -576,7 +622,7 @@
             inflammation in cancer through strong cross-discipline collaboration
             between cancer basic science researchers and imaging scientists.
             These collaborations are expected to advance the science and
-            understanding of cancer inflammation interactions.
+            understanding of cancer inflammation interactions.</details>
           </td>
         </tr>
         <tr>
@@ -589,6 +635,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of this renewing Notice of Funding Opportunity (NOFO) is
             to support investigator-initiated research efforts fostering
             innovation in computational genomics, data science, statistics,
@@ -600,7 +647,7 @@
             research, broadly applicable to human health and disease, and
             generalizable across diseases and biological systems. This
             initiative is also available through the Exploratory/Developmental
-            Research Grant (R21) mechanism.
+            Research Grant (R21) mechanism.</details>
           </td>
         </tr>
         <tr>
@@ -616,11 +663,12 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of this Notice of Funding Opportunity (NOFO) is to
             support innovative population-based research that can contribute to
             identifying and characterizing pathways and mechanisms through which
             work or occupation influences health outcomes and health status
-            among populations with health and/or health care disparities.
+            among populations with health and/or health care disparities.</details>
           </td>
         </tr>
         <tr>
@@ -636,6 +684,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This Notice of Funding Opportunity (NOFO) encourages grant
             applications from investigators interested in conducting basic,
             mechanistic research into the biological/genetic causes of cancer
@@ -651,7 +700,7 @@
             basic research expertise in cancer health disparities research who
             can expand available resources and tools, such as biospecimens,
             patient derived models, and methods that are necessary to conduct
-            basic research in cancer health disparities.
+            basic research in cancer health disparities.</details>
           </td>
         </tr>
         <tr>
@@ -667,6 +716,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) intends to stimulate research in discovery
             and development of novel, small molecules for cancer. Molecules
@@ -677,7 +727,7 @@
             screen; 2) primary screen implementation to identify initial
             screening hits (high throughput target-focused screens, or moderate
             throughput screens); 3) hit validation using a series of assays and
-            initial medicinal chemistry inspection to prioritize the hit set.
+            initial medicinal chemistry inspection to prioritize the hit set.</details>
           </td>
         </tr>
         <tr>
@@ -694,6 +744,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The Office of Disease Prevention (ODP) and participating National
             Institutes of Health (NIH) Institutes, Centers, and Offices (ICs)
             are issuing this R01 to solicit applications to address barriers and
@@ -706,7 +757,7 @@
             service providers. Interventions should address barriers and
             facilitators at two or more of the following levels: patient,
             clinician, healthcare setting, and neighborhood/community. Specific
-            research interests of participating NIH ICs are detailed within.
+            research interests of participating NIH ICs are detailed within.</details>
           </td>
         </tr>
         <tr>
@@ -722,10 +773,11 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This initiative will support multi-level and/or multi-domain
             intervention research to reduce disparities in liver diseases and
             liver cancer among populations who experience health disparities in
-            the United States (U.S.).
+            the United States (U.S.).</details>
           </td>
         </tr>
         <tr>
@@ -741,6 +793,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This Notice of Funding Opportunity (NOFO) aims to support research
             on interdisciplinary population approaches to increasing awareness
             of the relationship between alcohol and cancer risk, understanding
@@ -754,7 +807,7 @@
             control. Proposals addressing understudied areas are encouraged, as
             is attention to underrepresented minority (URM) populations
             experiencing cancer and alcohol-related disparities such as American
-            Indian, and Alaskan Native populations.
+            Indian, and Alaskan Native populations.</details>
           </td>
         </tr>
         <tr>
@@ -770,6 +823,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This Notice of Funding Opportunity (NOFO) will solicit mechanistic
             research that aims to understand how and why expectancy effects
             occur in a cancer context, elucidate their role in cancer symptom
@@ -785,7 +839,7 @@
             caregivers, and/or dyadic/social networks. Program is particularly
             interested in applications that enroll individuals and groups from
             populations historically underrepresented or excluded from
-            biomedical and behavioral research.
+            biomedical and behavioral research.</details>
           </td>
         </tr>
         <tr>
@@ -802,6 +856,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) encourages the submission of applications
             that propose to advance research in cancer etiology and early
@@ -824,7 +879,7 @@
             Alzheimer&rsquo;s, depression, hip fracture, osteoporosis and
             rheumatoid arthritis) may also be supported. Research projects that
             do not involve the use of PLCO biospecimens will not be supported
-            under this NOFO.
+            under this NOFO.</details>
           </td>
         </tr>
         <tr>
@@ -840,6 +895,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of the NIH Independent Scientist Award (K02) is to
             foster the development of outstanding scientists and enable them to
             expand their potential to make significant contributions to their
@@ -848,7 +904,7 @@
             who can demonstrate the need for a period of intensive research
             focus as a means of enhancing their research careers. Each
             independent scientist career award program must be tailored to meet
-            the individual needs of the candidate.
+            the individual needs of the candidate.</details>
           </td>
         </tr>
         <tr>
@@ -864,6 +920,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of the NIH Pathway to Independence Award (K99/R00)
             program is to facilitate a timely transition of outstanding
             postdoctoral researchers with a research and/or clinical doctorate
@@ -871,7 +928,7 @@
             independent, tenure-track or equivalent faculty positions. The
             program will provide independent NIH research support during this
             transition in order to help awardees to launch competitive,
-            independent research careers
+            independent research careers.</details>
           </td>
         </tr>
         <tr>
@@ -887,6 +944,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of the NIH Independent Scientist Award (K02) is to
             foster the development of outstanding scientists and enable them to
             expand their potential to make significant contributions to their
@@ -895,7 +953,7 @@
             who can demonstrate the need for a period of intensive research
             focus as a means of enhancing their research careers. Each
             independent scientist career award program must be tailored to meet
-            the individual needs of the candidate.
+            the individual needs of the candidate.</details>
           </td>
         </tr>
         <tr>
@@ -911,6 +969,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of the NIH Mentored Research Scientist Development Award
             (K01) is to provide support and &ldquo;protected time&rdquo; (three
             to five years) for an intensive, supervised career development
@@ -922,7 +981,7 @@
             to train in a new field or for individuals who have had a hiatus in
             their research career because of illness or pressing family
             circumstances. Other ICs use the K01 to support career development
-            in specific fields.
+            in specific fields.</details>
           </td>
         </tr>
         <tr>
@@ -935,6 +994,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) intends to accelerate the adoption and
             validation of molecular/cellular/imaging markers (referred to as
@@ -949,7 +1009,7 @@
             radiation therapies are increasingly combined with immunotherapies
             to enhance the durability of anti-cancer responses, assays for
             measuring multiple markers, including immune markers, can be
-            developed and validated simultaneously.
+            developed and validated simultaneously.</details>
           </td>
         </tr>
         <tr>
@@ -962,6 +1022,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of this engineering-oriented funding opportunity
             announcement (FOA) is to encourage submissions of
             exploratory/developmental Bioengineering Research Grant (EBRG)
@@ -973,7 +1034,7 @@
             that test functionality or validate performance in the chosen
             setting. Applications that propose phase III clinical trials in any
             area of cancer research are not sought by and will not be supported
-            through this FOA
+            through this FOA.</details>
           </td>
         </tr>
         <tr>
@@ -986,13 +1047,14 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The NIH Exploratory/Developmental Grant supports exploratory and
             developmental research projects by providing support for the early
             and conceptual stages of these projects. These studies may involve
             considerable risk but may lead to a breakthrough in a particular
             area, or to the development of novel techniques, agents,
             methodologies, models, or applications that could have a major
-            impact on a field of biomedical, behavioral, or clinical research.
+            impact on a field of biomedical, behavioral, or clinical research.</details>
           </td>
         </tr>
         <tr>
@@ -1004,6 +1066,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this Notice of Funding Opportunity (NOFO), the National
             Cancer Institute (NCI) encourages the submission of
             exploratory/developmental research grant (R21) applications that
@@ -1016,7 +1079,7 @@
             research, such as the development of novel techniques, agents,
             methodologies, models, or applications that could have a major
             impact on a field of cancer research (e.g. epidemiologic,
-            biomedical, behavioral, health care delivery or clinical).
+            biomedical, behavioral, health care delivery or clinical).</details>
           </td>
         </tr>
         <tr>
@@ -1029,6 +1092,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             Through this notice of funding opportunity (NOFO), the National
             Cancer Institute (NCI) invites applications for
             investigator-initiated studies addressing mechanisms by which
@@ -1040,7 +1104,7 @@
             side effect profile compared to other classes of incretin mimetics.
             In addition, this NOFO seeks to draw in talented scientists to the
             cancer biology field who may study incretin mimetic effects on
-            diseases other than cancer.
+            diseases other than cancer.</details>
           </td>
         </tr>
         <tr>
@@ -1053,6 +1117,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of this Notice of Funding Opportunity (NOFO) is to
             support studies that will identify, develop, and/or test strategies
             for overcoming barriers to the adoption, adaptation, integration,
@@ -1068,7 +1133,7 @@
             and implementation research methods and measures are encouraged.
             Applications that focus on re-implementation of evidence-based
             health services that may be disrupted amidst disasters remain
-            relevant.
+            relevant.</details>
           </td>
         </tr>
         <tr>
@@ -1081,6 +1146,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             This Notice of Funding Opportunity (NOFO)supports exploratory
             research leading to proof of concept for the development of new
             technologies relevant to the NIGMS mission. Projects should entail a
@@ -1090,7 +1156,7 @@
             art, may include, but are not limited to: laboratory instruments and
             other devices, algorithms and software, chemical reagents and
             processes, biological molecules or systems that have been modified
-            by human intervention for use as research tools.
+            by human intervention for use as research tools.</details>
           </td>
         </tr>
         <tr>
@@ -1103,13 +1169,14 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of the Research Enhancement Award Program (REAP) for
             Health Professional Schools and Graduate Schools is to support small
             scale research grants at institutions that do not receive
             substantial funding from the NIH, with an emphasis on providing
             biomedical research experiences primarily for health professional,
             undergraduate and graduate students and enhancing the research
-            environment at applicant institutions.
+            environment at applicant institutions.</details>
           </td>
         </tr>
         <tr>
@@ -1122,12 +1189,13 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The purpose of this Academic Research Enhancement Award (AREA) for
             Undergraduate-Focused Institutions is to support small scale
             research grants at institutions that do not receive substantial
             funding from the NIH, with an emphasis on providing biomedical
             research experiences primarily for undergraduate students, and
-            enhancing the research environment at applicant institutions.
+            enhancing the research environment at applicant institutions.</details>
           </td>
         </tr>
         <tr>
@@ -1140,6 +1208,7 @@
           <td>National Science Foundation (NSF)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             ECR&rsquo;s Building Capacity in STEM Education Research (ECR:
             BCSER) supports projects that build investigators&rsquo; capacity to
             carry out high-quality STEM education research that will enhance the
@@ -1158,7 +1227,7 @@
             be accomplished through investigator-initiated professional
             development and research projects or through institutes that enable
             researchers to integrate methodological strategies with theoretical
-            and practical issues in STEM education.
+            and practical issues in STEM education.</details>
           </td>
         </tr>
         <tr>
@@ -1171,6 +1240,7 @@
           <td>National Science Foundation (NSF)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The main goal of the S-STEM program is to enable low-income students
             with academic ability, talent or potential to pursue successful
             careers in promising STEM fields. Ultimately, the S-STEM program
@@ -1183,7 +1253,7 @@
             adapt, implement, and study evidence-based curricular and
             co-curricular activities that have been shown to be effective
             supporting recruitment, retention, transfer (if appropriate),
-            student success, academic/career pathways, and graduation in STEM.
+            student success, academic/career pathways, and graduation in STEM.</details>
           </td>
         </tr>
         <tr>
@@ -1193,13 +1263,14 @@
           <td>The Hope Foundation</td>
           <td>Early Career</td>
           <td>
+          <details><summary>Click for details</summary>
             A Career Development Program for Early Career Investigators-The
             primary purpose of the Dr. Charles A. Coltman, Jr. Fellowship is to
             engage outstanding early career investigators from SWOG-affiliated
             institutions in learning clinical trial methodology within an
             academic and network group environment that will lead to independent
             clinical research, while honoring the legacy of long-time SWOG Chair
-            and leader, Dr. Charles A. Coltman, Jr.
+            and leader, Dr. Charles A. Coltman, Jr.</details>
           </td>
         </tr>
         <tr>
@@ -1212,6 +1283,7 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The NIH Research Education Program (R25) supports research
             educational activities that complement other formal training
             programs in the mission areas of the NIH Institutes and Centers. The
@@ -1232,7 +1304,7 @@
             this FOA will support creative educational activities with a primary
             focus on Research Experiences for high school students,
             undergraduate students, and/or science teachers during the summer
-            academic break.
+            academic break.</details>
           </td>
         </tr>
         <tr>
@@ -1242,13 +1314,14 @@
           <td>National Institutes of Health (NIH)</td>
           <td>Early Career / Mid-Career</td>
           <td>
+          <details><summary>Click for details</summary>
             The Agency for Healthcare Research and Quality (AHRQ) announces its
             interest in supporting conferences through the AHRQ Single-Year and
             Multiple-Year Conference grant programs (R13). AHRQ seeks to support
             conferences that help further its mission to produce evidence to
             make health care safer, higher quality, more accessible, equitable
             and affordable, and to work with HHS and other partners to make sure
-            the evidence is understood and used.
+            the evidence is understood and used.</details>
           </td>
         </tr>
       </tbody>
