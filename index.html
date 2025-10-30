@@ -41,6 +41,26 @@
        #myTable tr:hover {
         background-color: #DAE7C6;
       }
+      
+      #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #c01f70;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
     </style>
 
     <!-- Alphabetize/Number Sort lists -->
@@ -61,7 +81,7 @@
  -->
   </head>
   <body>
-  
+  <!-- Page header with logo-->
   <div class="header">
   <a href="https://bccc.blog.brooklyn.edu/"><img src="https://bccc.blog.brooklyn.edu/files/2020/09/bccc_logo_final.png" alt="Brooklyn College Cancer Center Logo" style="width:20%"></a>
   <div class="header-right">
@@ -69,6 +89,10 @@
   </div>
 </div>
 
+  <!-- button to go back to top-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <!-- search filter-->
     <p style="float: right; font-family: tahoma">
       <i class="fa fa-search"></i> Search:
       <input
@@ -80,6 +104,7 @@
       />
     </p>
 
+  <!-- table-->
     <table class="sortable-table" id="myTable">
       <thead>
         <tr class="header">
@@ -1327,6 +1352,7 @@
       </tbody>
     </table>
     <script>
+    // search for text, date, or value
       function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
@@ -1348,6 +1374,7 @@
         }
       }
 
+// sort table alphabetically or numerically
       function sortTable() {
         var table, rows, switching, i, x, y, shouldSwitch;
         table = document.getElementById("myTable");
@@ -1382,6 +1409,28 @@
           }
         }
       }
+      
+      
+      
+      // Get the button to jump back to the top
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
     </script>
   </body>
 </html>
