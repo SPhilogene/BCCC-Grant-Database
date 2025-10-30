@@ -3,6 +3,10 @@
   <head>
     <title>BCCC Grant Database</title>
     <style>
+        body{
+    font-family:Segoe UI;
+    }
+    
       table {
         border-spacing: 0;
         width: 100%;
@@ -13,6 +17,10 @@
       td {
         text-align: left;
         padding: 16px;
+      }
+      
+            tr:nth-child(even) {
+        background-color: #FDF5F9;
       }
 
 .header {
@@ -30,9 +38,13 @@
     float: none;
   }
 }
-      tr:nth-child(even) {
-        background-color: #FDF5F9;
-      }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #565656;
+  color: white;
+}
 
       #myTable tr.header {
         background-color: #E2CFE8;
@@ -99,7 +111,7 @@
         type="text"
         id="myInput"
         onkeyup="myFunction()"
-        placeholder="Search"
+        placeholder="Search for funding"
         title="Searche"
       />
     </p>
@@ -108,12 +120,12 @@
     <table class="sortable-table" id="myTable">
       <thead>
         <tr class="header">
-          <th>Name</th>
-          <th class="numeric-sort">Deadline</th>
-          <th class="numeric-sort">Amount</th>
-          <th>Funder</th>
-          <th>Applicant</th>
-          <th>Purpose</th>
+          <th style="width: 35%">Name</th>
+          <th class="numeric-sort" style="width: 5%">Deadline</th>
+          <th class="numeric-sort" style="width: 10%">Amount</th>
+          <th style="width: 15%">Funder</th>
+          <th style="width: 15%">Applicant</th>
+          <th style="width: 20%">Purpose</th>
         </tr>
       </thead>
       <tbody>
@@ -1351,6 +1363,15 @@
         </tr>
       </tbody>
     </table>
+    
+    <!--Page footer-->
+    <footer>
+  <p>This page was designed, curated, and prepared by Prof. Sheena Philogene of the Brooklyn College Cancer Center (CommUnity Outreach, Research 
+and Education). <br>For questions, email <strong><a style="color:#fff" href="mailto:hege@example.com">BCCC-CURE-Library@brooklyn.cuny.edu</a></strong>
+ </p>
+</footer>
+
+<!--Javascript-->
     <script>
     // search for text, date, or value
       function myFunction() {
