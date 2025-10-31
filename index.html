@@ -124,12 +124,12 @@
     <table id="myTable"> <!--class="sortable-table" -->
         <thead>
             <tr class="header">
-                <th onclick="sortTable(0, this)" style="width: 35%">Name</th>
-                <th onclick="sortTable(1, this)" style="width: 5%">Deadline</th> <!--class="numeric-sort"-->
-                <th onclick="sortTable(2, this)" style="width: 10%">Amount</th> <!--class="numeric-sort"-->
-                <th onclick="sortTable(3, this)" style="width: 15%">Funder</th>
-                <th onclick="sortTable(4, this)" style="width: 15%">Applicant</th>
-                <th onclick="sortTable(5, this)" style="width: 20%">Purpose</th>
+                <th title="Click to sort" onclick="sortTable(0, this)" style="width: 30%">Name <span class="sort-icon">⇅</span></th>
+                <th title="Click to sort" onclick="sortTable(1, this)" style="width: 11%">Deadline <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
+                <th title="Click to sort" onclick="sortTable(2, this)" style="width: 10%">Amount <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
+                <th title="Click to sort" onclick="sortTable(3, this)" style="width: 15%">Funder <span class="sort-icon">⇅</span></th>
+                <th title="Click to sort" onclick="sortTable(4, this)" style="width: 12%">Applicant <span class="sort-icon">⇅</span></th>
+                <th title="Click to sort" onclick="sortTable(5, this)" style="width: 23%">Purpose <span class="sort-icon">⇅</span></th>
             </tr>
         </thead>
         <tbody>
@@ -1691,78 +1691,84 @@
             }
         }
 
-
+// sort alphabetically, numerically, or by date
 let sortDirections = {};
+
+// Keyboard support
+// function handleKey(event, colIndex, thElement) {
+//   if(event.key === 'Enter' || event.key === ' ') {
+//     sortTable(colIndex, thElement);
+//     event.preventDefault();
+//   }
+// }
+
+// Multi-format date parsing
+const datePatterns = [
+  /^\d{4}-\d{2}-\d{2}$/,        // YYYY-MM-DD
+  /^\d{2}\/\d{2}\/\d{4}$/,      // MM/DD/YYYY
+  /^\d{2}-\d{2}-\d{4}$/         // DD-MM-YYYY
+];
+
+function parseDate(value) {
+  for (const pattern of datePatterns) {
+    if (pattern.test(value)) {
+      if (pattern === datePatterns[0]) { // YYYY-MM-DD
+        return new Date(value).getTime();
+      } else if (pattern === datePatterns[1]) { // MM/DD/YYYY
+        const [m,d,y] = value.split('/');
+        return new Date(y, m-1, d).getTime();
+      } else if (pattern === datePatterns[2]) { // DD-MM-YYYY
+        const [d,m,y] = value.split('-');
+        return new Date(y, m-1, d).getTime();
+      }
+    }
+  }
+  return null; // Not a date
+}
 
 function sortTable(colIndex, thElement) {
   const table = document.getElementById("myTable");
   const tbody = table.tBodies[0];
   const rows = Array.from(tbody.rows);
 
-  // Toggle sort direction
+  // Toggle direction
   sortDirections[colIndex] = sortDirections[colIndex] === "asc" ? "desc" : "asc";
   const dir = sortDirections[colIndex];
 
-  // Remove old icons
-  table.querySelectorAll("th").forEach(th => {
-    const icon = th.querySelector(".sort-icon");
-    if (icon) th.removeChild(icon);
-  });
+  // Remove old icons and sorted class
+  table.querySelectorAll("th").forEach(th => th.classList.remove("sorted"));
 
-  // Add icon to current header
-  const icon = document.createElement("span");
-  icon.classList.add("sort-icon");
-  icon.textContent = dir === "asc" ? "▲" : "▼";
-  thElement.appendChild(icon);
+  // Add sorted class for styling
+  thElement.classList.add("sorted");
 
-  // Regex for YYYY-MM-DD date
-  const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+  // Update icon for this column
+  const icon = thElement.querySelector(".sort-icon");
+  if(icon) icon.textContent = dir === "asc" ? "▲" : "▼";
 
   // Sort rows
-  rows.sort((a, b) => {
-    let aCell = a.cells[colIndex];
-    let bCell = b.cells[colIndex];
+  rows.sort((a,b) => {
+    const aCell = a.cells[colIndex];
+    const bCell = b.cells[colIndex];
 
-    let aValue = aCell.getAttribute("data-sort") || aCell.textContent.trim();
-    let bValue = bCell.getAttribute("data-sort") || bCell.textContent.trim();
+    const aValue = aCell.getAttribute("data-sort") || aCell.textContent.trim();
+    const bValue = bCell.getAttribute("data-sort") || bCell.textContent.trim();
 
-    let aNum, bNum;
+    let aNum = parseDate(aValue) ?? (!isNaN(parseFloat(aValue.replace(/,/g,''))) ? parseFloat(aValue.replace(/,/g,'')) : null);
+    let bNum = parseDate(bValue) ?? (!isNaN(parseFloat(bValue.replace(/,/g,''))) ? parseFloat(bValue.replace(/,/g,'')) : null);
 
-    // Check for numeric
-    const aIsNum = !isNaN(parseFloat(aValue.replace(/,/g, '')));
-    const bIsNum = !isNaN(parseFloat(bValue.replace(/,/g, '')));
-
-    // Check for date
-    const aIsDate = datePattern.test(aValue);
-    const bIsDate = datePattern.test(bValue);
-
-    if (aIsDate) aNum = new Date(aValue).getTime();
-    else if (aIsNum) aNum = parseFloat(aValue.replace(/,/g, ''));
-    else aNum = null;
-
-    if (bIsDate) bNum = new Date(bValue).getTime();
-    else if (bIsNum) bNum = parseFloat(bValue.replace(/,/g, ''));
-    else bNum = null;
-
-    // Sorting logic
-    if (aNum !== null && bNum !== null) {
-      return dir === "asc" ? aNum - bNum : bNum - aNum;
-    } else if (aNum !== null) {
-      return dir === "asc" ? -1 : 1;
-    } else if (bNum !== null) {
-      return dir === "asc" ? 1 : -1;
-    } else {
-      return dir === "asc" 
-        ? aValue.toLowerCase().localeCompare(bValue.toLowerCase())
-        : bValue.toLowerCase().localeCompare(aValue.toLowerCase());
-    }
+    if(aNum !== null && bNum !== null) return dir==='asc'? aNum-bNum : bNum-aNum;
+    else if(aNum !== null) return dir==='asc'? -1 : 1;
+    else if(bNum !== null) return dir==='asc'? 1 : -1;
+    else return dir==='asc'? aValue.toLowerCase().localeCompare(bValue.toLowerCase())
+                           : bValue.toLowerCase().localeCompare(aValue.toLowerCase());
   });
 
-  // Rebuild table efficiently
+  // Efficiently rebuild table
   const fragment = document.createDocumentFragment();
   rows.forEach(r => fragment.appendChild(r));
   tbody.appendChild(fragment);
 }
+
 
 
         // Get the button to jump back to the top
