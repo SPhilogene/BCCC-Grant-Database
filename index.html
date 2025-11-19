@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>BCCC Grant Database</title>
-    <style>
-        body {
-            font-family: Segoe UI;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Franklin Gothic Book', 'Franklin Gothic';
 
+}
         table {
             border-spacing: 0;
             width: 100%;
             border: 1px solid #ddd;
+            letter-spacing: -0.01em;
         }
 
         th,
@@ -21,7 +23,7 @@
         }
 
         tr:nth-child(even) {
-            background-color: #FDF5F9;
+            background-color: #fafafa;
         }
 
         .header {
@@ -48,11 +50,21 @@
         }
 
         #myTable tr.header {
-            background-color: #E2CFE8;
+            background-color: #882346;
+            color: white;
+            font-family: Segoe UI;
+            font-size: clamp(16px, 1rem + 0.5vw, 20px);
+            letter-spacing: 0.01em;
+            
         }
 
+         .no-hover:hover {
+        background-color: #882346 !important; /* Reverts to the parent's background */
+        cursor: default; /* Changes cursor back if it was modified on hover */
+    }
+
         #myTable tr:hover {
-            background-color: #DAE7C6;
+            background-color: rgba(239, 167, 11, 0.25);
         }
 
         #myBtn {
@@ -64,7 +76,7 @@
             font-size: 18px;
             border: none;
             outline: none;
-            background-color: #c01f70;
+            background-color: #882346;
             color: white;
             cursor: pointer;
             padding: 15px;
@@ -73,7 +85,7 @@
 
         a:link,
         a:visited {
-            color: #c01f70;
+            color: #882346;
         }
 
         a:hover,
@@ -84,9 +96,53 @@
         #myBtn:hover {
             background-color: #555;
         }
-    </style>
+        
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.brooklyn.edu/wp-content/uploads/NBS-Hero-Physics-01.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-    <!-- Alphabetize/Number Sort lists -->
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Rubik Mono One', monospace;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  margin-left: 60px;
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    margin-left: 60px;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 600px) {
+  .hero-text {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    margin-left: 160px;
+  }
+}
+
+</style>
+
+ <link href='https://fonts.googleapis.com/css?family=Rubik+Mono+One' rel='stylesheet'>
+ 
+  <!-- Alphabetize/Number Sort lists -->
     <link rel="stylesheet"
         href="https://www.cssscript.com/demo/sort-html-table-alphabetical-numerical/dist/sortable-tables.min.css" />
     <script
@@ -99,17 +155,16 @@
 <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
  -->
 </head>
-
 <body>
-    <!-- Page header with logo-->
-    <div class="header">
-        <a href="https://bccc.blog.brooklyn.edu/"><img
-                src="https://bccc.blog.brooklyn.edu/files/2020/09/bccc_logo_final.png"
-                alt="Brooklyn College Cancer Center Logo" style="width:20%"></a>
-        <div class="header-right">
-            <h1 style="font-family:Segoe UI; margin-top: 7px;">Funding Opportunity Directory</h1>
+
+<div class="hero-image">
+  <div class="hero-text"> <p style="font-size: clamp(2.5rem, -2.9rem + 6.333vw, 8rem);">
+Funding<br>Opportunities<br>Directory</p>
+
         </div>
-    </div>
+</div>
+
+
 
     <!-- button to go back to top-->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -117,13 +172,13 @@
     <!-- search filter-->
     <p style="float: right; font-family: tahoma">
         <i class="fa fa-search"></i> Search:
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for funding" title="Searche" />
+        <input type="text" size="30" id="myInput" onkeyup="myFunction()" placeholder="Search Current Opportunities" title="Search" />
     </p>
 
     <!-- table-->
     <table id="myTable"> <!--class="sortable-table" -->
         <thead>
-            <tr class="header">
+            <tr class="header no-hover">
                 <th title="Click to sort" onclick="sortTable(0, this)" style="width: 30%">Name <span class="sort-icon">⇅</span></th>
                 <th title="Click to sort" onclick="sortTable(1, this)" style="width: 11%">Deadline <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
                 <th title="Click to sort" onclick="sortTable(2, this)" style="width: 10%">Amount <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
@@ -144,7 +199,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Cycle 57 of the PSC-CUNY Research Award Program is now active. The
                         PSC-CUNY Research Award Program (&ldquo;the Program&rdquo;) seeks to
                         grow faculty research, scholarship, and creative activities in all
@@ -168,7 +223,7 @@
                 <td>Postdoctoral</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>Postdoctoral Fellowships (PF) support new investigators in
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>Postdoctoral Fellowships (PF) support new investigators in
                         research training programs to position them for independent careers in cancer research. As part
                         of their evaluation, peer reviewers consider how well the fellowship will broaden the
                         applicant&#39;s research training and experience.
@@ -186,7 +241,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>The intent of the Extramural Discovery Science (EDS)
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>The intent of the Extramural Discovery Science (EDS)
                         Accelerator Award is to support the commercialization of an ongoing cancer research project and
                         to validate and de-risk technologies. Proposals should address key experiment(s) required to
                         move findings toward commercialization that do not easily fit into traditional grant funding
@@ -213,7 +268,7 @@
                 <td>Small business</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>Through this Notice of Funding Opportunity (NOFO), the
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>Through this Notice of Funding Opportunity (NOFO), the
                         National Institutes of Health (NIH) and Centers for Disease Control and Prevention (CDC) aim to
                         foster the advancement and accelerate the growth of early-career scientists transitioning to
                         entrepreneurship by simultaneously supporting their entrepreneurial development and the conduct
@@ -239,7 +294,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         SWOG Cancer Research Network&rsquo;s mission is to improve the
                         practice of cancer medicine in preventing, detecting, and treating
                         cancer, and to enhance the quality of life for cancer survivors,
@@ -265,7 +320,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         IUSE: EDU supports projects that seek to bring recent advances in
                         STEM knowledge into undergraduate education, that adapt, improve,
                         and incorporate evidence-based practices into STEM teaching and
@@ -298,7 +353,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The NIH Research Education Program (R25) supports research education
                         activities in the mission areas of the NIH. The overarching goal of
                         this R25 program is to support educational activities that encourage
@@ -328,7 +383,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The National Institutes of Health (NIH) will award Ruth L.
                         Kirschstein National Research Service Award (NRSA) Institutional
                         Research Training Grants (T32) to eligible, domestic institutions to
@@ -358,7 +413,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) invites applications for P50 Research Center
                         Grants for Specialized Programs of Research Excellence (SPORE).
@@ -400,7 +455,7 @@
                 <td>Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The goal of the National Institute of General Medical Sciences
                         (NIGMS) Ruth L. Kirschstein National Research Service Award (NRSA)
                         Predoctoral Basic Biomedical Sciences Research Training Program is
@@ -430,7 +485,7 @@
                 <td>Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The Biomedical Research Environment &amp; Sponsored Programs
                         Administration Development (BRE-SPAD) Program aims to support
                         resource-limited institutions to conduct research, enhance their
@@ -452,7 +507,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The Stephen I. Katz Early Stage Investigator Research Project Grant
                         supports an innovative project that represents a change in research
                         direction for an early stage investigator (ESI) and for which no
@@ -477,7 +532,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this program, NSF establishes partnerships with government,
                         higher education, and industry that are designed to affect
                         sustainable improvements in a jurisdiction's research
@@ -515,7 +570,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This Funding Opportunity Announcement (FOA) solicits applications
                         from research partnerships formed by academic and industrial
                         investigators to accelerate the development and adoption of
@@ -543,7 +598,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>As part of the American Cancer Society (ACS) mission to
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>As part of the American Cancer Society (ACS) mission to
                         promote fair and just opportunity to prevent, detect, treat, and survive cancer, ACS has created
                         the Cancer Health Research Center (CHERC) program. CHERC's are designed to address cancer health
                         inequities that affect local or regional communities. Priority will be given to Centers that
@@ -567,7 +622,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Because of recent technological advances in synthetic biology and
                         bioengineering, researchers are now able to tailor cells and
                         cell-like systems for a variety of basic and applied research
@@ -596,7 +651,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Science and Technology Studies (STS) is an interdisciplinary field
                         that investigates the conceptual foundations, historical
                         developments and social contexts of science, technology, engineering
@@ -620,7 +675,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of this Notice of Funding Opportunity (NOFO) is to
                         stimulate efforts to translate scientific discoveries and
                         engineering developments into methods or tools that address problems
@@ -646,7 +701,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This notice of funding opportunity (NOFO) encourages applications
                         for research in cancer control and population sciences. The
                         overarching goal is to provide support to promote research efforts
@@ -669,7 +724,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The NIH Research Project Grant supports a discrete, specified,
                         circumscribed project in areas representing the specific interests
                         and competencies of the investigator(s). The proposed project must
@@ -690,7 +745,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) along with other participating Institutes
                         encourages submission of applications proposing to conduct secondary
@@ -726,7 +781,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The goal of this NOFO is to support applications for novel theory
                         and methods development that enable better understanding of how
                         genetic and non-genetic factors contribute to complex trait
@@ -750,7 +805,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The National Library of Medicine (NLM) supports innovative research
                         and development in biomedical informatics and data science. This
                         funding opportunity focuses on biomedical discovery and data-powered
@@ -777,7 +832,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) invites research grant applications (R01) for
                         the development and application of current and emerging molecular
@@ -812,7 +867,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of this renewing Notice of Funding Opportunity (NOFO) is
                         to support investigator-initiated research efforts fostering
                         innovation in computational genomics, data science, statistics,
@@ -842,7 +897,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of this Notice of Funding Opportunity (NOFO) is to
                         support innovative population-based research that can contribute to
                         identifying and characterizing pathways and mechanisms through which
@@ -864,7 +919,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This Notice of Funding Opportunity (NOFO) encourages grant
                         applications from investigators interested in conducting basic,
                         mechanistic research into the biological/genetic causes of cancer
@@ -897,7 +952,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) intends to stimulate research in discovery
                         and development of novel, small molecules for cancer. Molecules
@@ -926,7 +981,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The Office of Disease Prevention (ODP) and participating National
                         Institutes of Health (NIH) Institutes, Centers, and Offices (ICs)
                         are issuing this R01 to solicit applications to address barriers and
@@ -956,7 +1011,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This initiative will support multi-level and/or multi-domain
                         intervention research to reduce disparities in liver diseases and
                         liver cancer among populations who experience health disparities in
@@ -977,7 +1032,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This Notice of Funding Opportunity (NOFO) aims to support research
                         on interdisciplinary population approaches to increasing awareness
                         of the relationship between alcohol and cancer risk, understanding
@@ -1008,7 +1063,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This Notice of Funding Opportunity (NOFO) will solicit mechanistic
                         research that aims to understand how and why expectancy effects
                         occur in a cancer context, elucidate their role in cancer symptom
@@ -1042,7 +1097,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) encourages the submission of applications
                         that propose to advance research in cancer etiology and early
@@ -1082,7 +1137,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of the NIH Independent Scientist Award (K02) is to
                         foster the development of outstanding scientists and enable them to
                         expand their potential to make significant contributions to their
@@ -1108,7 +1163,7 @@
                 <td>Early Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of the NIH Pathway to Independence Award (K99/R00)
                         program is to facilitate a timely transition of outstanding
                         postdoctoral researchers with a research and/or clinical doctorate
@@ -1133,7 +1188,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of the NIH Independent Scientist Award (K02) is to
                         foster the development of outstanding scientists and enable them to
                         expand their potential to make significant contributions to their
@@ -1159,7 +1214,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of the NIH Mentored Research Scientist Development Award
                         (K01) is to provide support and &ldquo;protected time&rdquo; (three
                         to five years) for an intensive, supervised career development
@@ -1186,7 +1241,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) intends to accelerate the adoption and
                         validation of molecular/cellular/imaging markers (referred to as
@@ -1216,7 +1271,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of this engineering-oriented funding opportunity
                         announcement (FOA) is to encourage submissions of
                         exploratory/developmental Bioengineering Research Grant (EBRG)
@@ -1243,7 +1298,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The NIH Exploratory/Developmental Grant supports exploratory and
                         developmental research projects by providing support for the early
                         and conceptual stages of these projects. These studies may involve
@@ -1264,7 +1319,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this Notice of Funding Opportunity (NOFO), the National
                         Cancer Institute (NCI) encourages the submission of
                         exploratory/developmental research grant (R21) applications that
@@ -1292,7 +1347,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         Through this notice of funding opportunity (NOFO), the National
                         Cancer Institute (NCI) invites applications for
                         investigator-initiated studies addressing mechanisms by which
@@ -1319,7 +1374,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of this Notice of Funding Opportunity (NOFO) is to
                         support studies that will identify, develop, and/or test strategies
                         for overcoming barriers to the adoption, adaptation, integration,
@@ -1350,7 +1405,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         This Notice of Funding Opportunity (NOFO)supports exploratory
                         research leading to proof of concept for the development of new
                         technologies relevant to the NIGMS mission. Projects should entail a
@@ -1375,7 +1430,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of the Research Enhancement Award Program (REAP) for
                         Health Professional Schools and Graduate Schools is to support small
                         scale research grants at institutions that do not receive
@@ -1397,7 +1452,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The purpose of this Academic Research Enhancement Award (AREA) for
                         Undergraduate-Focused Institutions is to support small scale
                         research grants at institutions that do not receive substantial
@@ -1419,7 +1474,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         ECR&rsquo;s Building Capacity in STEM Education Research (ECR:
                         BCSER) supports projects that build investigators&rsquo; capacity to
                         carry out high-quality STEM education research that will enhance the
@@ -1454,7 +1509,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The main goal of the S-STEM program is to enable low-income students
                         with academic ability, talent or potential to pursue successful
                         careers in promising STEM fields. Ultimately, the S-STEM program
@@ -1483,7 +1538,7 @@
                 <td>Early Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>The purpose of the International Research Scientist
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>The purpose of the International Research Scientist
                         Development Award (IRSDA) is to provide support and protected time (three to five years) to
                         advanced postdoctoral U.S. research scientists and recently-appointed U.S. junior faculty for an
                         intensive, mentored research career development experience in a low- or middle-income country
@@ -1507,7 +1562,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>Cancer mortality rates have been steadily declining in the
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>Cancer mortality rates have been steadily declining in the
                         United States for several decades; however, certain types of cancer remain stubbornly lethal,
                         with the lowest five-year survival rates. Effective screening tests are not available for many
                         of these cancers, resulting in the late detection and diagnosis of advanced-stage malignancies
@@ -1537,7 +1592,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>The overarching goal for the Accelerating Research
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>The overarching goal for the Accelerating Research
                         Translation (ART) program is to advance the U.S. scientific and economic leadership by building
                         capacity and increasing the number of robust translational research ecosystems in Institutions
                         of Higher Education (IHEs) that span across the full geography of our nation. The ART program
@@ -1565,7 +1620,7 @@
                 <td>Early Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         A Career Development Program for Early Career Investigators-The
                         primary purpose of the Dr. Charles A. Coltman, Jr. Fellowship is to
                         engage outstanding early career investigators from SWOG-affiliated
@@ -1587,7 +1642,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The NIH Research Education Program (R25) supports research
                         educational activities that complement other formal training
                         programs in the mission areas of the NIH Institutes and Centers. The
@@ -1621,7 +1676,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>
                         The Agency for Healthcare Research and Quality (AHRQ) announces its
                         interest in supporting conferences through the AHRQ Single-Year and
                         Multiple-Year Conference grant programs (R13). AHRQ seeks to support
@@ -1642,7 +1697,7 @@
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
-                        <summary>Click for details</summary>This Notice of Funding Opportunity (NOFO) invites grant
+                        <summary style="color:rgb(143, 58, 50)">Click for details</summary>This Notice of Funding Opportunity (NOFO) invites grant
                         applications for Environmental Health Sciences Core Centers (EHSCC). As intellectual hubs for
                         environmental health science research, the EHSCC are expected to be the thought leaders for the
                         field and advance the goals of the 2025-2029 NIEHS Strategic Plan. The Core Centers provide
@@ -1731,19 +1786,50 @@ function sortTable(colIndex, thElement) {
   const tbody = table.tBodies[0];
   const rows = Array.from(tbody.rows);
 
-  // Toggle direction
-  sortDirections[colIndex] = sortDirections[colIndex] === "asc" ? "desc" : "asc";
-  const dir = sortDirections[colIndex];
+//   // Toggle direction
+//   sortDirections[colIndex] = sortDirections[colIndex] === "asc" ? "desc" : "asc";
+//   const dir = sortDirections[colIndex];
 
-  // Remove old icons and sorted class
-  table.querySelectorAll("th").forEach(th => th.classList.remove("sorted"));
+//   // Remove old icons and sorted class
+//   table.querySelectorAll("th").forEach(th => th.classList.remove("sorted"));
 
-  // Add sorted class for styling
+//   // Add sorted class for styling
+//   thElement.classList.add("sorted");
+
+//   // Update icon for this column
+//   const icon = thElement.querySelector(".sort-icon");
+//   if(icon) icon.textContent = dir === "asc" ? "▲" : "▼";
+
+// Cycle sort direction: asc → desc → neutral (null)
+if (sortDirections[colIndex] === "asc") {
+  sortDirections[colIndex] = "desc";
+} else if (sortDirections[colIndex] === "desc") {
+  sortDirections[colIndex] = null; // neutral / unsorted
+} else {
+  sortDirections[colIndex] = "asc";
+}
+
+const dir = sortDirections[colIndex];
+
+// Remove old icons and sorted class
+table.querySelectorAll("th").forEach(th => {
+  th.classList.remove("sorted");
+  const icon = th.querySelector(".sort-icon");
+  if (icon) icon.textContent = "⇅"; // neutral icon
+});
+
+// Add sorted class for styling if not neutral
+if (dir) {
   thElement.classList.add("sorted");
+}
 
-  // Update icon for this column
-  const icon = thElement.querySelector(".sort-icon");
-  if(icon) icon.textContent = dir === "asc" ? "▲" : "▼";
+// Update icon for this column
+const icon = thElement.querySelector(".sort-icon");
+if (icon) {
+  if (dir === "asc") icon.textContent = "▲";
+  else if (dir === "desc") icon.textContent = "▼";
+  else icon.textContent = "⇅"; // neutral
+}
 
   // Sort rows
   rows.sort((a,b) => {
@@ -1792,7 +1878,6 @@ function sortTable(colIndex, thElement) {
             console.log('test 6');
         }
     </script>
+
 </body>
-
 </html>
-
