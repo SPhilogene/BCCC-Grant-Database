@@ -19,7 +19,10 @@ body, html {
         th,
         td {
             text-align: left;
-            padding: 16px;
+            padding-top: 16px;
+padding-right: 12px;
+padding-bottom: 16px;
+padding-left: 12px;
         }
 
         tr:nth-child(even) {
@@ -53,7 +56,7 @@ body, html {
             background-color: #882346;
             color: white;
             font-family: Segoe UI;
-            font-size: clamp(16px, 1rem + 0.5vw, 20px);
+            font-size: clamp(14px, 1rem + 0.5vw, 18px);
             letter-spacing: 0.01em;
             
         }
@@ -119,6 +122,44 @@ body, html {
   margin-left: 60px;
 }
 
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+  color: #882346;
+  font-weight: bold;
+  line-height: 35px;
+  font-family: 'Franklin Gothic ATK', 'Franklin Gothic';
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  content: "»";
+}
+ul.breadcrumb li a {
+  color: #882346;
+  text-decoration: underline;
+  font-weight: normal;
+}
+ul.breadcrumb li a:hover {
+  color: #ffa340;
+  text-decoration: underline;
+  transition: all,.2s;
+}
+
+.container {
+justify-content: space-between;
+align-items: center;
+display: flex;
+padding: 8px;
+}
+
+.container ul{
+    margin: 0;
+}
+
+.container p{
+    margin: 0;
+}
+
 @media (max-width: 768px) {
   .hero-text {
     margin-left: 60px;
@@ -169,19 +210,27 @@ Funding<br>Opportunities<br>Directory</p>
     <!-- button to go back to top-->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<div class="container">
+    <!-- breadcrumbs-->
+     <ul class="breadcrumb">
+  <li><a href="https://www.brooklyn.edu/">Home</a></li>
+  <li><a href="https://www.brooklyn.edu/cancer-center/">Brooklyn College Cancer Center</a></li>
+  <li>Funding Opportunities Directory</li>
+</ul>
+
     <!-- search filter-->
     <p style="float: right; font-family: tahoma">
         <i class="fa fa-search"></i> Search:
         <input type="text" size="30" id="myInput" onkeyup="myFunction()" placeholder="Search Current Opportunities" title="Search" />
     </p>
-
+</div>
     <!-- table-->
     <table id="myTable"> <!--class="sortable-table" -->
         <thead>
             <tr class="header no-hover">
-                <th title="Click to sort" onclick="sortTable(0, this)" style="width: 30%">Name <span class="sort-icon">⇅</span></th>
-                <th title="Click to sort" onclick="sortTable(1, this)" style="width: 11%">Deadline <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
-                <th title="Click to sort" onclick="sortTable(2, this)" style="width: 10%">Amount <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
+                <th title="Click to sort" onclick="sortTable(0, this)" style="width: 26%">Name <span class="sort-icon">⇅</span></th>
+                <th title="Click to sort" onclick="sortTable(1, this)" style="width: 12%">Deadline <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
+                <th title="Click to sort" onclick="sortTable(2, this)" style="width: 12%">Amount <span class="sort-icon">⇅</span></th> <!--class="numeric-sort"-->
                 <th title="Click to sort" onclick="sortTable(3, this)" style="width: 15%">Funder <span class="sort-icon">⇅</span></th>
                 <th title="Click to sort" onclick="sortTable(4, this)" style="width: 12%">Applicant <span class="sort-icon">⇅</span></th>
                 <th title="Click to sort" onclick="sortTable(5, this)" style="width: 23%">Purpose <span class="sort-icon">⇅</span></th>
@@ -1616,7 +1665,7 @@ Funding<br>Opportunities<br>Directory</p>
                         target="_blank">BCCC-CURE/ACS Pilot Grants</a></td>
                 <td>2026-03-15</td>
                 <td data-sort="40000">$40,000</td>
-                <td>Brooklyn College Cancer Center</td>
+                <td>Brooklyn College Cancer Center (BCCC-CURE)</td>
                 <td>Early Career / Mid-Career</td>
                 <td>
                     <details><br>
