@@ -1879,38 +1879,15 @@ if (icon) {
             document.documentElement.scrollTop = 0;
         }
 
-// Hide rows with past dates
-    function hidePastRows() {
-  const rows = document.querySelectorAll("#myTable tbody tr");
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  rows.forEach(row => {
-    const dateText = row.children[1].textContent.trim(); // 2nd column
-    const rowDate = new Date(dateText);
-
-    if (!isNaN(rowDate)) {
-      rowDate.setHours(0, 0, 0, 0);
-
-      if (rowDate < today) {
-        row.style.display = "none";
-      }
-    }
-  });
-}
-
-hidePastRows();
-
-// Make rows visible if the deadline is within 70 days
-  function showOnly70DaysOut() {
+// Hide rows with past dates or due more than 3 months in the future
+function filterRowsByDateRange() {
   const rows = document.querySelectorAll("#myTable tbody tr");
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Create cutoff date (today + 70 days)
   const cutoff = new Date(today);
-  cutoff.setDate(cutoff.getDate() + 70);
+  cutoff.setDate(cutoff.getDate() + 90); // 90 days from now
 
   rows.forEach(row => {
     const dateText = row.children[1].textContent.trim(); // Date column
@@ -1919,16 +1896,17 @@ hidePastRows();
     if (!isNaN(rowDate)) {
       rowDate.setHours(0, 0, 0, 0);
 
-      if (rowDate >= cutoff) {
-        row.style.display = "";      // show
+      // Show only dates between today and 90 days out
+      if (rowDate >= today && rowDate <= cutoff) {
+        row.style.display = "";
       } else {
-        row.style.display = "none";  // hide
+        row.style.display = "none";
       }
     }
   });
 }
 
-showOnly70DaysOut();
+filterRowsByDateRange();
 
 
       
