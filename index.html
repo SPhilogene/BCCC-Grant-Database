@@ -1646,6 +1646,28 @@ if (icon) {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+// Hide rows with past dates
+    function hidePastRows() {
+  const rows = document.querySelectorAll("#dateTable tbody tr");
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  rows.forEach(row => {
+    const dateText = row.children[1].textContent.trim(); // 2nd column
+    const rowDate = new Date(dateText);
+
+    if (!isNaN(rowDate)) {
+      rowDate.setHours(0, 0, 0, 0);
+
+      if (rowDate < today) {
+        row.style.display = "none";
+      }
+    }
+  });
+}
+
+hidePastRows();
     </script>
 
 </body>
