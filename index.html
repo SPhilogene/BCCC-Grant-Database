@@ -1946,31 +1946,31 @@ if (icon) {
         }
 
 // Hide rows with past dates or due more than 3 months in the future
-function filterRowsByDateRange() {
-  const rows = document.querySelectorAll("#myTable tbody tr");
+// function filterRowsByDateRange() {
+//   const rows = document.querySelectorAll("#myTable tbody tr");
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+//   const today = new Date();
+//   today.setHours(0, 0, 0, 0);
 
-  const cutoff = new Date(today);
-  cutoff.setDate(cutoff.getDate() + 300); // 90 days from now
+//   const cutoff = new Date(today);
+//   cutoff.setDate(cutoff.getDate() + 300); // 90 days from now
 
-  rows.forEach(row => {
-    const dateText = row.children[1].textContent.trim(); // Date column
-    const rowDate = new Date(dateText);
+//   rows.forEach(row => {
+//     const dateText = row.children[1].textContent.trim(); // Date column
+//     const rowDate = new Date(dateText);
 
-    if (!isNaN(rowDate)) {
-      rowDate.setHours(0, 0, 0, 0);
+//     if (!isNaN(rowDate)) {
+//       rowDate.setHours(0, 0, 0, 0);
 
-      // Show only dates between today and 90 days out
-      if (rowDate >= today && rowDate <= cutoff) {
-        row.style.display = "";
-      } else {
-        row.style.display = "none";
-      }
-    }
-  });
-}
+//       // Show only dates between today and 90 days out
+//       if (rowDate >= today && rowDate <= cutoff) {
+//         row.style.display = "";
+//       } else {
+//         row.style.display = "none";
+//       }
+//     }
+//   });
+// }
 
 filterRowsByDateRange();
 
